@@ -6,11 +6,21 @@
       "DisplayName": "YoutubeSearch",
       "ColorIndex": 0
     },
+    "75868da7-9d75-4091-b4a5-bba5d3a5fe40": {
+      "ProjectGuid": "75868da7-9d75-4091-b4a5-bba5d3a5fe40",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 1
+    },
+    "20487a31-0b2d-40a0-a2e8-d5fa9f01beda": {
+      "ProjectGuid": "20487a31-0b2d-40a0-a2e8-d5fa9f01beda",
+      "DisplayName": "YoutubeApi",
+      "ColorIndex": 2
+    },
     "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }

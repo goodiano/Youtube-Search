@@ -28,100 +28,95 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.videoDrawingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.thumbnailDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.videoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.videoDrawingBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            btnSearch = new Button();
+            txtSearch = new TextBox();
+            videoDrawingBindingSource = new BindingSource(components);
+            dataGridView = new DataGridView();
+            videoBindingSource = new BindingSource(components);
+            thumbnailDataGridViewImageColumn = new DataGridViewImageColumn();
+            titleDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            descriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            urlDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)videoDrawingBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)videoBindingSource).BeginInit();
+            SuspendLayout();
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(600, 13);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 0;
-            this.btnSearch.Text = "&Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            btnSearch.Location = new Point(600, 13);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(75, 23);
+            btnSearch.TabIndex = 0;
+            btnSearch.Text = "&Search";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(12, 13);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(575, 23);
-            this.txtSearch.TabIndex = 2;
+            txtSearch.Location = new Point(12, 13);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(575, 23);
+            txtSearch.TabIndex = 2;
             // 
             // dataGridView
             // 
-            this.dataGridView.AllowUserToOrderColumns = true;
-            this.dataGridView.AutoGenerateColumns = false;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.thumbnailDataGridViewImageColumn,
-            this.titleDataGridViewTextBoxColumn,
-            this.authorDataGridViewTextBoxColumn,
-            this.urlDataGridViewTextBoxColumn});
-            this.dataGridView.DataSource = this.videoBindingSource;
-            this.dataGridView.Location = new System.Drawing.Point(12, 42);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowTemplate.Height = 25;
-            this.dataGridView.Size = new System.Drawing.Size(663, 396);
-            this.dataGridView.TabIndex = 1;
-            // 
-            // thumbnailDataGridViewImageColumn
-            // 
-            this.thumbnailDataGridViewImageColumn.DataPropertyName = "Thumbnail";
-            this.thumbnailDataGridViewImageColumn.HeaderText = "Thumbnail";
-            this.thumbnailDataGridViewImageColumn.Name = "thumbnailDataGridViewImageColumn";
-            // 
-            // titleDataGridViewTextBoxColumn
-            // 
-            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
-            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
-            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            // 
-            // authorDataGridViewTextBoxColumn
-            // 
-            this.authorDataGridViewTextBoxColumn.DataPropertyName = "Author";
-            this.authorDataGridViewTextBoxColumn.HeaderText = "Author";
-            this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
-            // 
-            // urlDataGridViewTextBoxColumn
-            // 
-            this.urlDataGridViewTextBoxColumn.DataPropertyName = "Url";
-            this.urlDataGridViewTextBoxColumn.HeaderText = "Url";
-            this.urlDataGridViewTextBoxColumn.Name = "urlDataGridViewTextBoxColumn";
+            dataGridView.AllowUserToOrderColumns = true;
+            dataGridView.AutoGenerateColumns = false;
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView.Columns.AddRange(new DataGridViewColumn[] { thumbnailDataGridViewImageColumn, titleDataGridViewTextBoxColumn, descriptionDataGridViewTextBoxColumn, urlDataGridViewTextBoxColumn });
+            dataGridView.DataSource = videoBindingSource;
+            dataGridView.Location = new Point(12, 42);
+            dataGridView.Name = "dataGridView";
+            dataGridView.RowTemplate.Height = 25;
+            dataGridView.Size = new Size(663, 396);
+            dataGridView.TabIndex = 1;
             // 
             // videoBindingSource
             // 
-            this.videoBindingSource.DataSource = typeof(YoutubeSearch.Video);
+            videoBindingSource.DataSource = typeof(Video);
+            // 
+            // thumbnailDataGridViewImageColumn
+            // 
+            thumbnailDataGridViewImageColumn.DataPropertyName = "Thumbnail";
+            thumbnailDataGridViewImageColumn.HeaderText = "Thumbnail";
+            thumbnailDataGridViewImageColumn.Name = "thumbnailDataGridViewImageColumn";
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
+            titleDataGridViewTextBoxColumn.HeaderText = "Title";
+            titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            // 
+            // urlDataGridViewTextBoxColumn
+            // 
+            urlDataGridViewTextBoxColumn.DataPropertyName = "Url";
+            urlDataGridViewTextBoxColumn.HeaderText = "Url";
+            urlDataGridViewTextBoxColumn.Name = "urlDataGridViewTextBoxColumn";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 450);
-            this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.dataGridView);
-            this.Controls.Add(this.btnSearch);
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "YoutubeSearch";
-            ((System.ComponentModel.ISupportInitialize)(this.videoDrawingBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(687, 450);
+            Controls.Add(txtSearch);
+            Controls.Add(dataGridView);
+            Controls.Add(btnSearch);
+            Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "YoutubeSearch";
+            ((System.ComponentModel.ISupportInitialize)videoDrawingBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)videoBindingSource).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -130,10 +125,11 @@
         private TextBox txtSearch;
         private BindingSource videoDrawingBindingSource;
         private DataGridView dataGridView;
+        private DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
+        private BindingSource videoBindingSource;
         private DataGridViewImageColumn thumbnailDataGridViewImageColumn;
         private DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn urlDataGridViewTextBoxColumn;
-        private BindingSource videoBindingSource;
     }
 }
